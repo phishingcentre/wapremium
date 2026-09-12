@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in | short.video</title>
+  <title>Log in | TikTok-style demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,12 +13,16 @@
 <body>
   <main class="page-shell">
     <section class="form-panel" id="message" aria-labelledby="page-title">
-      <div class="login-brand" aria-label="short.video">
+      <div class="login-brand" aria-label="TikTok-style demo">
         <div class="video-mark"><span></span><span></span><span></span></div>
-        <span>short<span class="brand-dot">.</span>video</span>
+        <span class="brand-name">TikTok</span>
       </div>
-      <h1 id="page-title">Log in</h1>
-      <p class="login-subtitle">Join the moment. Watch, create, and share.</p>
+      <h1 id="page-title">Log in to TikTok</h1>
+      <p class="login-subtitle">Manage your account and enjoy your feed.</p>
+
+      <div class="login-tabs" role="tablist" aria-label="Login method">
+        <button class="tab-button active" type="button" role="tab" aria-selected="true">Use phone / email / username</button>
+      </div>
 
       <form id="login-form">
         <label for="first-text">Email or username</label>
@@ -35,8 +39,12 @@
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
 
-      <div class="divider"><span>OR</span></div>
-      <a class="signup-link" href="#signup">Create account</a>
+      <div class="social-login" aria-label="Other login methods">
+        <button class="social-button" type="button"><span class="social-icon google-icon">G</span>Continue with Google</button>
+        <button class="social-button" type="button"><span class="social-icon facebook-icon">f</span>Continue with Facebook</button>
+        <button class="social-button" type="button"><span class="social-icon apple-icon">●</span>Continue with Apple</button>
+      </div>
+      <p class="signup-prompt">Don't have an account? <a class="signup-link" href="#signup">Sign up</a></p>
       <p class="legal-note">By continuing, you agree to our Terms and Privacy Policy.</p>
     </section>
   </main>
