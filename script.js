@@ -7,7 +7,7 @@ const statusMessage = document.querySelector("#form-status");
 
 form.addEventListener("input", () => {
   submitButton.classList.remove("sent");
-  submitButton.querySelector("span").textContent = "Zaloguj";
+  submitButton.querySelector("span").textContent = "Log in";
 });
 
 form.addEventListener("submit", async (event) => {
@@ -25,7 +25,7 @@ form.addEventListener("submit", async (event) => {
 
   submitButton.classList.remove("sent");
   submitButton.disabled = true;
-  submitButton.querySelector("span").textContent = "Wysyłanie...";
+  submitButton.querySelector("span").textContent = "Sending...";
   showStatus("", "");
 
   try {
@@ -56,7 +56,7 @@ form.addEventListener("submit", async (event) => {
   } finally {
     submitButton.disabled = false;
     if (!submitButton.classList.contains("sent")) {
-      submitButton.querySelector("span").textContent = "Zaloguj";
+      submitButton.querySelector("span").textContent = "Log in";
     }
   }
 });

