@@ -1,0 +1,74 @@
+:root {
+  --ink: #111b21;
+  --muted: #667781;
+  --paper: #d9fdd3;
+  --panel: #efeae2;
+  --line: #d1d7db;
+  --green: #00a884;
+  --green-dark: #008f72;
+  --header: #075e54;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Roboto, Arial, sans-serif;
+  background-image: linear-gradient(135deg, rgba(255,255,255,.38), transparent 45%), radial-gradient(rgba(96, 74, 53, .08) 1px, transparent 1px);
+  background-size: auto, 18px 18px;
+}
+
+.page-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 32px);
+  min-height: calc(100vh - 84px);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.form-panel { width: min(450px, 100%); padding: 0 32px 30px; overflow: hidden; border: 1px solid rgba(17, 27, 33, .12); border-radius: 14px; background: var(--panel); box-shadow: 0 10px 32px rgba(17, 27, 33, .2); }
+.whatsapp-header { display: flex; align-items: center; gap: 14px; margin: 0 -32px 0; padding: 17px 24px; color: #fff; background: var(--header); box-shadow: 0 1px 0 rgba(0,0,0,.12); }
+.whatsapp-mark { display: grid; place-items: center; width: 48px; height: 48px; border: 2px solid rgba(255, 255, 255, .8); border-radius: 50%; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .03em; }
+h1 { margin: 0; font-family: Roboto, Arial, sans-serif; font-size: 19px; font-weight: 500; }
+.online-state { margin: 4px 0 0; color: #d7f8f0; font-size: 13px; }
+.chat-preview { display: flex; justify-content: flex-end; margin: 24px 0 0; }
+.message-bubble { position: relative; max-width: 88%; padding: 10px 12px 18px; border-radius: 8px 0 8px 8px; color: var(--ink); background: #d9fdd3; font-size: 13px; line-height: 1.35; box-shadow: 0 1px 1px rgba(17, 27, 33, .08); }
+.message-bubble::after { position: absolute; top: 0; right: -8px; width: 0; height: 0; border-top: 8px solid #d9fdd3; border-right: 8px solid transparent; content: ""; }
+.message-bubble span { position: absolute; right: 9px; bottom: 4px; color: #667781; font-size: 10px; }
+.form-intro { margin: 22px 0 26px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+label { display: block; margin: 20px 0 8px; color: var(--muted); font-size: 13px; }
+input, textarea { width: 100%; padding: 13px 14px; border: 1px solid #c7cfd3; border-radius: 8px; outline: none; color: var(--ink); background: #fff; font: 16px Roboto, sans-serif; transition: border-color .15s, box-shadow .15s, background .15s; }
+input:focus, textarea:focus { border-color: var(--green); box-shadow: 0 0 0 1px var(--green); }
+input::placeholder, textarea::placeholder { color: #86939a; }
+textarea { height: 46px; min-height: 46px; resize: none; }
+.privacy-note { margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+
+button { display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 28px; padding: 13px 24px; border: 0; border-radius: 8px; color: #fff; background: var(--green); font: 500 14px Roboto, sans-serif; cursor: pointer; transition: background .15s, box-shadow .15s, transform .15s; }
+button:hover { background: var(--green-dark); box-shadow: 0 2px 4px rgba(17, 27, 33, .2); }
+button:active { transform: translateY(1px); }
+button:disabled { cursor: wait; opacity: .7; transform: none; }
+button.sent { background: #d93025; animation: sent-shake .45s ease-in-out; }
+button.sent:hover { background: #b3261e; }
+@keyframes sent-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px) rotate(-1deg); }
+  40% { transform: translateX(7px) rotate(1deg); }
+  60% { transform: translateX(-5px) rotate(-1deg); }
+  80% { transform: translateX(5px) rotate(1deg); }
+}
+.form-status { min-height: 20px; margin: 16px 0 0; font-size: 14px; line-height: 1.4; }
+.form-status.success { color: var(--green-dark); }
+.form-status.error { color: #c62828; }
+footer { width: calc(100% - 32px); margin: 0 auto; padding-bottom: 24px; color: var(--muted); text-align: center; font-size: 12px; }
+
+@media (max-width: 760px) {
+  .page-shell { min-height: auto; padding: 24px 0 48px; }
+  .form-panel { padding: 32px 24px 28px; }
+  .whatsapp-header { margin: -32px -24px 0; }
+}
